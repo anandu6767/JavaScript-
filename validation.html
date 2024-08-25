@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            padding: 20px 50px;
+            text-align: center;
+            margin: 100px auto;
+            border: 2px solid rgb(30, 127, 5);
+            width: 400px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container {
+            text-align: left;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 5px gray;
+            padding: 20px 30px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(39, 40, 46);
+            color: rgb(255, 255, 255);
+            border-radius: 2px;
+            border: 1px solid rgb(12, 12, 12);
+            margin-bottom: 5px;
+        }
+
+        /* Additional CSS for error states */
+        input.error-input {
+            border-color: red;
+        }
+
+        button {
+            background-color: greenyellow;
+            border: none;
+            border-radius: 2px;
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: blanchedalmond;
+        }
+
+        .error {
+            font-size: medium;
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="form1">
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" id="uname" name="uname" placeholder="Enter your username" onfocusout="Checkusername()">
+                <span id="uname-error" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" id="pwd" name="pwd" placeholder="Enter your password" onfocusout="Checkpassword()">
+                <span id="pwd-error" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" onfocusout="Checkemail()">
+                <span id="email-error" class="error"></span>
+            </div>
+
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+       
+    </script>
+</body>
+</html>

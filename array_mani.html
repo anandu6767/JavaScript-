@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+</head>
+<body>
+    <h1>Array Manipulation with JavaScript</h1>
+    <p id="originalArray"></p>
+    <p id="largestNumber"></p>
+    <p id="sortedArrayAsc"></p>
+    <p id="sortedArrayDesc"></p>
+    <script>
+        
+let numbers = [23, 45, 67, 89, 12, 90, 56, 43, 78];
+
+
+document.getElementById("originalArray").innerHTML = "Original Array: " + numbers.join(", ");
+
+let largestNumber = Math.max(...numbers);
+document.getElementById("largestNumber").innerHTML = "Largest Number: " + largestNumber;
+
+let sortedArrayAsc = numbers.slice().sort((a, b) => a - b);
+document.getElementById("sortedArrayAsc").innerHTML = "Sorted Array (Ascending): " + sortedArrayAsc.join(", ");
+
+
+let sortedArrayDesc = numbers.slice().sort((a, b) => b - a);
+document.getElementById("sortedArrayDesc").innerHTML = "Sorted Array (Descending): " + sortedArrayDesc.join(", ");
+
+    </script>
+</body>
+</html>

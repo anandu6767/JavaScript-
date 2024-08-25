@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Class Example</title>
+</head>
+<body>
+    <h2>Car Class Example</h2>
+
+    <!-- Display Car Information -->
+    <p id="car-info"></p>
+
+    <!-- Buttons to interact with the Car -->
+    <button id="driveButton">Drive</button>
+    <button id="stopButton">Stop</button>
+
+    <script>
+        // Define the Car class
+        class Car {
+            constructor(make, model, year) {
+                this.make = make;
+                this.model = model;
+                this.year = year;
+                this.isDriving = false;
+            }
+
+            // Method to start driving the car
+            drive() {
+                if (this.isDriving) {
+                    return `${this.make} ${this.model} is already driving.`;
+                } else {
+                    this.isDriving = true;
+                    return `${this.make} ${this.model} is now driving.`;
+                }
+            }
+
+            // Method to stop the car
+            stop() {
+                if (this.isDriving) {
+                    this.isDriving = false;
+                    return `${this.make} ${this.model} has stopped.`;
+                } else {
+                    return `${this.make} ${this.model} is already stopped.`;
+                }
+            }
+
+            // Method to display the car's details
+            displayInfo() {
+                return `Car Info: ${this.year} ${this.make} ${this.model}`;
+            }
+        }
+
+        // Create a new Car object
+        const myCar = new Car('Toyota', 'Corolla', 2021);
+
+        // Display the car's information
+        document.getElementById('car-info').textContent = myCar.displayInfo();
+
+        // Add event listener to the "Drive" button
+        document.getElementById('driveButton').addEventListener('click', function() {
+            alert(myCar.drive());
+        });
+
+        // Add event listener to the "Stop" button
+        document.getElementById('stopButton').addEventListener('click', function() {
+            alert(myCar.stop());
+        });
+    </script>
+</body>
+</html>

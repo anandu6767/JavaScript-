@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <h1>change the text when a button is clicked</h1>
+        <p id="text">this is orginal one</p>
+        <button type="button" onclick="textchange()">click here</button>
+    </body>
+    <script>
+        function textchange(){
+        document.getElementById("text").innerHTML="this text is changed";
+        }
+    </script>
+</html>

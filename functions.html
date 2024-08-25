@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions</h1>
+<p>Using a function as a variable:</p>
+
+<p id="temp"></p>
+<p>biggest no among 81,52,34,24,15,6 </p>
+<p id="bigno"></p>
+
+<script>
+let text = "The temperature is " + toCelsius(78) + " Celsius.";
+document.getElementById("temp").innerHTML = text;
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+} 
+function findMax(arr){
+    return Math.max(...arr);
+}
+let numbers=[81,52,34,24,15,6];
+let biggestno=findMax(numbers);
+document.getElementById("bigno").innerHTML=biggestno; 
+</script>
+
+</body>
+</html>
